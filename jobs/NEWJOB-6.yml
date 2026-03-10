@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "6"
+includeSelector: "{ subgraph: \"MENU\" } OR { location: STAGING name: FCT_MENU } OR { location: SRC name: MENU } OR { location: STAGING name: STG_MENU }"
+name: NEW JOB
+type: Job
