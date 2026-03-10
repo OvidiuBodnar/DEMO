@@ -1,0 +1,14 @@
+fileVersion: 1
+id: "24"
+mappingDefinitions:
+  SRC:
+    database: OBODNAR_QA
+    schema: TASTY_QA
+  STAGING:
+    database: OBODNAR_QA
+    schema: PUBLIC
+  TARGET:
+    database: OBODNAR_QA
+    schema: REPORTING
+name: QA OVI
+type: Environment

@@ -1,0 +1,203 @@
+fileVersion: 1
+id: 7f4c4c9b-b794-435a-bff7-768cab56523b
+name: STG_ORDER_DETAIL_38M
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGING
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 77767aa1-1785-4265-94b1-87b24df59cbb
+          stepCounter: 7f4c4c9b-b794-435a-bff7-768cab56523b
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ORDER_DETAIL_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 884bd96f-b744-4c69-8c5e-101a37dc6580
+                stepCounter: 50235cba-146f-45f5-be22-c970879d8c1e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7d128317-cbbf-4be9-8675-9e2f8a934167
+          stepCounter: 7f4c4c9b-b794-435a-bff7-768cab56523b
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ff8f9d2c-b6c7-43bd-8100-532bef24c6a0
+                stepCounter: 50235cba-146f-45f5-be22-c970879d8c1e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b4736a76-329e-4b68-a6f7-02741b3bbdab
+          stepCounter: 7f4c4c9b-b794-435a-bff7-768cab56523b
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: MENU_ITEM_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b421928b-539c-40ef-9bd4-4e9bb459d84c
+                stepCounter: 50235cba-146f-45f5-be22-c970879d8c1e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1d68beb7-d3ac-460f-b7c7-a4595731d870
+          stepCounter: 7f4c4c9b-b794-435a-bff7-768cab56523b
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: DISCOUNT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 976bee60-f6f2-4a7e-baac-9be9e73e9132
+                stepCounter: 50235cba-146f-45f5-be22-c970879d8c1e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ef69b127-d1d9-4947-b6a9-9cce800e229f
+          stepCounter: 7f4c4c9b-b794-435a-bff7-768cab56523b
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: LINE_NUMBER
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d49cf613-85a6-4202-aa70-0354320f081c
+                stepCounter: 50235cba-146f-45f5-be22-c970879d8c1e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 467fa98e-9a29-4004-b937-f285739c4937
+          stepCounter: 7f4c4c9b-b794-435a-bff7-768cab56523b
+        config: {}
+        dataType: NUMBER(5,0)
+        description: ""
+        name: QUANTITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: d532a06b-5048-42cc-9d44-99afd2c5a10f
+                stepCounter: 50235cba-146f-45f5-be22-c970879d8c1e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 097e2a26-60f3-4873-8dd8-e622eadf1f34
+          stepCounter: 7f4c4c9b-b794-435a-bff7-768cab56523b
+        config: {}
+        dataType: NUMBER(38,4)
+        description: ""
+        name: UNIT_PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6854d23c-6121-48a4-9d90-e85352429411
+                stepCounter: 50235cba-146f-45f5-be22-c970879d8c1e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: e6f3c813-1db5-4e82-a697-e055293a64df
+          stepCounter: 7f4c4c9b-b794-435a-bff7-768cab56523b
+        config: {}
+        dataType: NUMBER(38,4)
+        description: ""
+        name: PRICE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 761e5d08-8347-4b85-85f6-26547c2e56a1
+                stepCounter: 50235cba-146f-45f5-be22-c970879d8c1e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2fcc2c06-f7f9-433a-85f1-d11d43020784
+          stepCounter: 7f4c4c9b-b794-435a-bff7-768cab56523b
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: ORDER_ITEM_DISCOUNT_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c720edbe-def1-4041-b5f3-d5244d51d762
+                stepCounter: 50235cba-146f-45f5-be22-c970879d8c1e
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bd168d27-c631-4f4f-93c6-00f554c7c173
+          stepCounter: 7f4c4c9b-b794-435a-bff7-768cab56523b
+        config: {}
+        dataType: NUMBER(38,4)
+        description: ""
+        name: PROFIT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: c973c0e3-7d28-4d07-b1f6-8ba779bd2fbd
+                stepCounter: 481fb9fc-6468-49a2-a747-ffa74c4dd004
+            transform: ""
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8430fe57-8633-4002-82ad-c8cca9f707a7
+          stepCounter: 7f4c4c9b-b794-435a-bff7-768cab56523b
+        config: {}
+        dataType: VARCHAR(256)
+        description: ""
+        name: NEW_CATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0da22296-2b36-40ab-8535-4e77ba753d1b
+                stepCounter: 481fb9fc-6468-49a2-a747-ffa74c4dd004
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          ORDER_DETAIL_38M: 50235cba-146f-45f5-be22-c970879d8c1e
+          STG_MENU: 481fb9fc-6468-49a2-a747-ffa74c4dd004
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: ORDER_DETAIL_38M
+          - locationName: STAGING
+            nodeName: STG_MENU
+        join:
+          joinCondition: |-
+            FROM {{ ref('SRC', 'ORDER_DETAIL_38M') }} "ORDER_DETAIL_38M"
+            INNER JOIN {{ ref('STAGING', 'STG_MENU') }} "STG_MENU"
+            ON "ORDER_DETAIL_38M"."MENU_ITEM_ID" = "STG_MENU"."MENU_ITEM_ID"
+        name: STG_ORDER_DETAIL_38M
+        noLinkRefs: []
+  name: STG_ORDER_DETAIL_38M
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
