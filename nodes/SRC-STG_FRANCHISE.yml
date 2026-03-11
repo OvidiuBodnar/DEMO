@@ -24,7 +24,7 @@ operation:
         config: {}
         dataType: NUMBER(38,0)
         description: ""
-        name: FRANCHISE_ID
+        name: FRANCHISE_FRANCHISE_ID
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -38,7 +38,7 @@ operation:
         config: {}
         dataType: VARCHAR(256)
         description: ""
-        name: FIRST_NAME
+        name: FRANCHISE_FIRST_NAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -52,7 +52,7 @@ operation:
         config: {}
         dataType: VARCHAR(256)
         description: ""
-        name: LAST_NAME
+        name: FRANCHISE_LAST_NAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -66,7 +66,7 @@ operation:
         config: {}
         dataType: VARCHAR(256)
         description: ""
-        name: CITY
+        name: FRANCHISE_CITY
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -80,7 +80,7 @@ operation:
         config: {}
         dataType: VARCHAR(256)
         description: ""
-        name: COUNTRY
+        name: FRANCHISE_COUNTRY
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -94,7 +94,7 @@ operation:
         config: {}
         dataType: VARCHAR(256)
         description: ""
-        name: E_MAIL
+        name: FRANCHISE_E_MAIL
         nullable: true
         sourceColumnReferences:
           - columnReferences:
@@ -108,17 +108,14 @@ operation:
         config: {}
         dataType: VARCHAR(256)
         description: ""
-        name: PHONE_NUMBER
+        name: FRANCHISE_PHONE_NUMBER
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: e28676c9-60d5-4b62-b050-0723ecf67dde
                 stepCounter: abe6044b-cf96-4cd2-b56d-f268681a8847
             transform: UPPER("FRANCHISE"."PHONE_NUMBER")
-      - acceptedValues:
-          strictMatch: true
-          values: []
-        appliedColumnTests: {}
+      - appliedColumnTests: {}
         columnReference:
           columnCounter: c6c87a5d-f929-422d-9dbe-0c013a49b4c1
           stepCounter: 0cad8afe-fd40-4d5e-a12d-2000947eff5d
@@ -126,17 +123,18 @@ operation:
         dataType: STRING
         defaultValue: ""
         description: ""
-        keyColumnType: None
-        name: FULL_NAME
+        name: FRANCHISE_FULL_NAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: "0"
-                stepCounter: "0"
+              - columnCounter: c78c0c15-4668-4d70-95f0-669f9ec38caa
+                stepCounter: abe6044b-cf96-4cd2-b56d-f268681a8847
             transform: "\"FRANCHISE\".\"FIRST_NAME\"|| ' ' || \"FRANCHISE\".\"LAST_NAME\""
-        systemColumnType: None
     cteString: ""
+    description: ""
+    destinationName: ""
     enabledColumnTestIDs: []
+    materializationOption: ""
     sourceMapping:
       - aliases:
           FRANCHISE: abe6044b-cf96-4cd2-b56d-f268681a8847

@@ -23,7 +23,7 @@ operation:
           stepCounter: 481fb9fc-6468-49a2-a747-ffa74c4dd004
         config: {}
         dataType: NUMBER(19,0)
-        description: ""
+        description: Identifier for a specific menu. Serves as a foreign key linking menu items to their respective menus. Used in queries and reports that analyze menu composition and pricing strategies. Sourced directly from the staging table without transformations. Enables detailed analysis of menu performance and informs decisions on menu optimization.
         name: MENU_ID
         nullable: true
         sourceColumnReferences:
@@ -37,7 +37,7 @@ operation:
           stepCounter: 481fb9fc-6468-49a2-a747-ffa74c4dd004
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: Numeric identifier for a specific menu type. Foreign key linking to the menu type dimension table. Used in reports categorizing menu items by type. Sourced directly from the staging table without transformations. Facilitates analysis of sales and popularity across different menu types, such as breakfast, lunch, or dinner.
         name: MENU_TYPE_ID
         nullable: true
         sourceColumnReferences:
@@ -51,7 +51,7 @@ operation:
           stepCounter: 481fb9fc-6468-49a2-a747-ffa74c4dd004
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Categorical name of the menu type. Examples include 'Breakfast', 'Lunch', or 'Dinner'. Used for filtering and grouping menu items in reports and dashboards. Sourced directly from the staging table without transformations. Aids in understanding customer preferences and optimizing menu offerings for different times of day.
         name: MENU_TYPE
         nullable: true
         sourceColumnReferences:
@@ -65,7 +65,7 @@ operation:
           stepCounter: 481fb9fc-6468-49a2-a747-ffa74c4dd004
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Name of the food truck brand offering the menu item. Used for filtering and grouping menu items by brand in reports. Sourced directly from the staging table without transformations. Allows for comparative analysis of menu item performance across different food truck brands and informs brand-specific marketing strategies.
         name: TRUCK_BRAND_NAME
         nullable: true
         sourceColumnReferences:
@@ -79,7 +79,7 @@ operation:
           stepCounter: 481fb9fc-6468-49a2-a747-ffa74c4dd004
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: Unique identifier for a specific menu item. Primary key for the menu item dimension table. Used to track individual item performance and manage inventory. Sourced directly from the staging table without transformations. Essential for detailed sales analysis and supply chain management, ensuring accurate tracking of each menu item.
         name: MENU_ITEM_ID
         nullable: true
         sourceColumnReferences:
@@ -93,7 +93,7 @@ operation:
           stepCounter: 481fb9fc-6468-49a2-a747-ffa74c4dd004
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Descriptive name of the menu item. Used for display in reports, dashboards, and customer-facing applications. Sourced directly from the staging table without transformations. Aids in identifying popular items and understanding customer preferences. Supports marketing efforts by providing a clear and recognizable name for each menu item.
         name: MENU_ITEM_NAME
         nullable: true
         sourceColumnReferences:
@@ -107,7 +107,7 @@ operation:
           stepCounter: 481fb9fc-6468-49a2-a747-ffa74c4dd004
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Categorical classification of the menu item. Examples include 'Entree', 'Side', or 'Beverage'. Used for filtering and grouping menu items in reports and dashboards. Sourced directly from the staging table without transformations. Facilitates analysis of sales and popularity across different item categories, informing menu design and promotional strategies.
         name: ITEM_CATEGORY
         nullable: true
         sourceColumnReferences:
@@ -121,7 +121,7 @@ operation:
           stepCounter: 481fb9fc-6468-49a2-a747-ffa74c4dd004
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: More granular classification of the menu item. Examples include 'Burger', 'Fries', or 'Soda'. Used for detailed analysis of menu item performance. Sourced directly from the staging table without transformations. Enables precise tracking of customer preferences and informs decisions on menu optimization and targeted marketing campaigns.
         name: ITEM_SUBCATEGORY
         nullable: true
         sourceColumnReferences:
@@ -135,7 +135,7 @@ operation:
           stepCounter: 481fb9fc-6468-49a2-a747-ffa74c4dd004
         config: {}
         dataType: NUMBER(38,4)
-        description: ""
+        description: Direct cost in USD associated with producing a single unit of the menu item. Used in profitability calculations and pricing analysis. Sourced directly from the staging table without transformations. Essential for determining menu item profitability and informing pricing strategies to maximize revenue and maintain healthy profit margins.
         name: COST_OF_GOODS_USD
         nullable: true
         sourceColumnReferences:
@@ -149,7 +149,7 @@ operation:
           stepCounter: 481fb9fc-6468-49a2-a747-ffa74c4dd004
         config: {}
         dataType: NUMBER(38,4)
-        description: ""
+        description: Price in USD at which the menu item is sold to customers. Used in revenue calculations and pricing analysis. Sourced directly from the staging table without transformations. Critical for determining revenue generated by each menu item and informing pricing strategies to optimize sales and maintain competitiveness.
         name: SALE_PRICE_USD
         nullable: true
         sourceColumnReferences:
@@ -163,7 +163,7 @@ operation:
           stepCounter: 481fb9fc-6468-49a2-a747-ffa74c4dd004
         config: {}
         dataType: VARIANT
-        description: ""
+        description: JSON object containing health and nutritional information for the menu item. Includes details such as calorie count, fat content, and allergen information. Sourced directly from the staging table without transformations. Used for compliance reporting, customer information, and health-focused marketing initiatives, providing transparency about menu item composition.
         name: MENU_ITEM_HEALTH_METRICS_OBJ
         nullable: true
         sourceColumnReferences:
@@ -181,7 +181,7 @@ operation:
         config: {}
         dataType: NUMBER(38,4)
         defaultValue: ""
-        description: ""
+        description: Calculated profit margin for each menu item in USD. Derived by subtracting COST_OF_GOODS_USD from SALE_PRICE_USD. Used in profitability analysis and menu optimization strategies. This field is calculated within the data pipeline. Aids in identifying high-profit items and informs decisions on pricing, promotions, and menu adjustments to maximize overall profitability.
         keyColumnType: None
         name: PROFIT
         nullable: true
@@ -201,7 +201,7 @@ operation:
         config: {}
         dataType: VARCHAR(256)
         defaultValue: ""
-        description: ""
+        description: Recategorized product category after applying business logic. Used for enhanced product performance reporting and inventory management. Derives from source product category, but may be remapped based on a defined lookup table. Allows for flexible grouping of products beyond original classifications. Aids in identifying broader trends. Not a primary key. Not a foreign key. No default value. Can be null if no mapping exists. Supports advanced analytics and custom dashboards.
         keyColumnType: None
         name: NEW_CATEGORY
         nullable: true
